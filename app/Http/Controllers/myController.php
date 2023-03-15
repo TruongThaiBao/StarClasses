@@ -121,7 +121,8 @@ class myController extends Controller
 
         $vd = DB::table('subject')
             ->join('lessions', 'subject.subject_id', '=', 'lessions.subject_id')
-            ->select("subject.course_id", "subject.subject_name", "subject.content", "subject.picture", "subject.subject_id", "subject.picture", "lessions.lession_name", "lessions.lession_id")
+            ->join('courses','courses.course_id','=','subject.course_id')
+            ->select("subject.course_id", "subject.subject_name", "subject.content", "subject.picture", "subject.subject_id", "subject.picture", "lessions.lession_name", "lessions.lession_id", 'courses.price')
             ->where([['subject.course_id', '=', $id], ['subject.subject_id', '=', $key]])
             ->orderBy('lessions.lession_name', 'ASC')
             ->limit(1)
