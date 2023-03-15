@@ -45,41 +45,40 @@
             <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
                 <div class="about-div">
                     <i class="fa fa-paper-plane-o fa-4x icon-round-border"></i>
-                    <h3>Giáo dục chất lượng
+                    <h3 style="text-align: center;">Giáo dục chất lượng
                     </h3>
                     <p>
-
-                        Chất lượng giáo dục là việc thực hiện mục tiêu của cơ sở giáo dục hoặc chương trình giáo dục, yêu cầu của Luật Giáo dục, Luật sửa đổi, bổ sung một số điều của Luật Giáo dục, Luật Giáo dục đại học. , phù hợp với nhu cầu sử dụng nguồn nhân lực phục vụ phát triển kinh tế - xã hội của địa phương và cả nước.                    </p>
+                    Chất lượng giáo dục là nền tảng để phát triển bản thân và đóng góp cho xã hội. Nó giúp học sinh và sinh viên phát triển kỹ năng, kiến thức và tư duy sáng tạo. Ngoài ra, giáo dục tốt còn tạo ra cơ hội nghề nghiệp và thành công trong cuộc sống. Vì vậy, đầu tư vào giáo dục tốt là đầu tư vào tương lai của bản thân và đất nước.</p>
                     <br>
-                    <a href="#" class="btn btn-info btn-set">HỎI CHUYÊN GIA</a>
+                    <a href="#contact-sec" class="btn btn-info btn-set">HỎI CHUYÊN GIA</a>
                 </div>
             </div>
             <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
                 <div class="about-div">
                     <i class="fa fa-bolt fa-4x icon-round-border"></i>
-                    <h3>
-                        HỆ THỐNG</h3>
+                    <h3 style="text-align: center;">HỆ THỐNG</h3>
                     <p>
                         Một cách tiếp cận có hệ thống thường được sử dụng tại các dự án tại nơi làm việc. Mục tiêu của phương pháp này là xác định các phương tiện hiệu quả nhất để tạo ra các kết quả nhất quán và tối ưu. Nhiều công ty cần cách tiếp cận này để họ trang bị cho nhân viên đủ kiến ​​thức và nguồn lực để đạt được mục tiêu của công ty.
                     </p>
-                    <a href="#" class="btn btn-info btn-set">HỎI CHUYÊN GIA</a>
+                    <br>
+                    <a href="#contact-sec" class="btn btn-info btn-set">HỎI CHUYÊN GIA</a>
                 </div>
             </div>
             <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
                 <div class="about-div">
                     <i class="fa fa-magic fa-4x icon-round-border"></i>
-                    <h3>NGHIÊN CỨU MỘT ĐỐI VỚI MỘT
-                    </h3>
+                    <h3 style="text-align: center;">ONE TO ONE</h3>
                     <p>
-                        “One to One” – Phương pháp học không còn xa lạ trên thế giới, nhưng ở Việt Nam nó vẫn luôn được coi là một hình thức dạy kèm (thầy là những học sinh không chuyên)
-                        Đây là phương pháp học với giáo viên bản ngữ có trình độ tiếng Anh không chỉ mang lại hiệu quả mà còn thuận tiện cho người học.
+                        “One to One” – Phương pháp học không còn xa lạ trên thế giới.
+                        Đây là phương pháp hiệu quả để tăng cường sự tập trung, sự tự tin và động lực học tập. Học viên sẽ được đội ngũ giáo viên có kinh nghiệm hướng dẫn và đưa ra những phản hồi và đánh giá cụ thể để giúp cải thiện kỹ năng và kiến thức.
                     </p>
-                    <a href="#" class="btn btn-info btn-set">HỎI CHUYÊN GIA</a>
+                    <br>
+                    <a href="#contact-sec" class="btn btn-info btn-set">HỎI CHUYÊN GIA</a>
                 </div>
             </div>
         </div>
     </div>
-    <div id="features-sec" class="container" >
+    <div id="course-sec" class="container" >
         <div class="row text-center">
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
                 <h1 data-scroll-reveal="enter from the bottom after 0.2s" class="header-line">
@@ -97,9 +96,9 @@
             <div class="row text-center" >
                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2" >
                     <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">
-                        GƯƠNG MẶT TIÊU BIỂU</h1>
+                        GIẢNG VIÊN</h1>
                     <p data-scroll-reveal="enter from the bottom after 0.3s">
-                        Những gương mặt tiêu biểu thành công năm trước
+                        Những giảng viên tiêu biểu thành công
                     </p>
                 </div>
             </div>
@@ -112,13 +111,13 @@
     </div>
     </div>
     <!-- FACULTY SECTION END-->
-    <div id="course-sec" class="container set-pad" >
+    <div id="" class="container set-pad" >
         <div class="row text-center" >
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2" >
                 <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">
-                    KHÓA HỌC THÊM </h1>
+                    HÀNH TRÌNH CHINH PHỤC ĐỈNH CAO </h1>
                 <p data-scroll-reveal="enter from the bottom after 0.3s">
-                    Ngoài các khóa học trên, chúng tôi còn có nhiều khóa học khác :
+                    Môi trường học tập định hướng thành công !
                 </p>
             </div>
         </div>
@@ -133,7 +132,7 @@
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed">
-                                    <strong> 35+</strong>
+                                    <strong> 50+</strong>
                                     TỈNH TRÊN TOÀN QUỐC
                                 </a>
                             </h4>
@@ -161,9 +160,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="alert alert-info" data-scroll-reveal="enter from the bottom after 1.1s">
+                <div class="alert alert-info" data-scroll-reveal="enter from the bottom after 1.1s" style="text-align: center;">
                 <span style="font-size:40px;">
-                    <strong> 2500 + </strong>
+                    <strong> 1000 + </strong>
                     <hr />
                     Trung Tâm
                 </span>

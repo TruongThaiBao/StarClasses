@@ -12,15 +12,11 @@
                     </select>
 
                 </li>
-                <li><a href="#home">
-                        TRANG CHỦ</a></li>
-                <li><a href="#features-sec">ĐẶC TRƯNG
-                    </a></li>
-                <li><a href="#faculty-sec">KHOA</a></li>
-                <li><a href="#course-sec">KHÓA HỌC
-                    </a></li>
-                <li><a href="#contact-sec">LIÊN HỆ
-                    </a></li>
+                <li><a href="#home">TRANG CHỦ</a></li>
+                <li><a href="#features-sec">ĐẶC TRƯNG</a></li>
+                <li><a href="#course-sec">KHOÁ HỌC</a></li>
+                <li><a href="#faculty-sec">GIẢNG VIÊN</a></li>
+                <li><a href="#contact-sec">LIÊN HỆ</a></li>
                 <li><a><i style="font-size: 1.2em" class="fa fa-solid fa-bars menu top_menu"></i>
                     </a>
                     <ul class="show-menu">
