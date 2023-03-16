@@ -26,6 +26,7 @@ Route::get('contact',[\App\Http\Controllers\myController::class,'contact'])->nam
 Route::post('postcontact',[\App\Http\Controllers\myController::class,'postcontact'])->name('postcontact');
 
 Route::get('lessionsshow/{id}/{key}',[\App\Http\Controllers\myController::class,'lessionsshow'])->name('lsshow');
+Route::get('lessionsshow/{id}',[\App\Http\Controllers\myController::class,'lessionsshow'])->name('lsshow_search');
 Route::get('/tai-file-pdf',[\App\Http\Controllers\myController::class,'printpdf'])->name('printpdf');
 // Route::get('/xuat-file-pdf',[\App\Http\Controllers\myController::class,'xuatpdf'])->name('xuatfilepdf');
 

@@ -6,7 +6,9 @@
         <div class="about-div">
             <div class="d-flex flex-column align-items-center col-3 form-group" style="display: flex;flex-direction: column;align-items: center;">
                 <div class="hand">
-                        <img class="img-thumbnail item-search" style="height: 208.96px;" src="{{asset('img/sub/'.$s->picture)}}" alt="">
+                        <a href="{{route('lsshow',[$s->course_id,$s->subject_id])}}}">
+                            <img class="img-thumbnail item-search" style="height: 208.96px;" src="{{asset('img/sub/'.$s->picture)}}" alt="">
+                        </a>
                    </div>
                 <h4 class="text-center">{{$s->subject_name}}</h4>
             </div>
