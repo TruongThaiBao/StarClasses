@@ -32,7 +32,7 @@ class myController extends Controller
         $xuat = DB::table('courses')
             ->join('subject', 'subject.course_id', '=', 'courses.course_id')
             ->join('lessions', 'lessions.subject_id', '=', 'subject.subject_id')
-            ->select('courses.course_name', 'subject.subject_name', 'lessions.lession_name', 'courses.price','subject.subject_id','subject.subject_name')
+            ->select('courses.course_name', 'subject.subject_name', 'lessions.lession_name', 'courses.price', 'subject.subject_id', 'subject.subject_name')
             ->orderBy('courses.course_id', 'ASC')
             ->get();
 
@@ -41,7 +41,15 @@ class myController extends Controller
             ->orderBy('subject_id')
             ->get();
 
-        return view('homepage')->with('mn', $query)->with('ds1', $query1)->with('xuat', $xuat)->with('search',$search);
+        $khoahochot = DB::table('courses') //Sử dụng class DB
+            ->select("course_id", "course_name", "description", "price", "picture", 'hot')
+            ->where('hot', '=', 1)
+            ->orderBy('course_name', 'ASC')
+            ->limit(3)
+            ->get();
+
+
+        return view('homepage')->with('mn', $query)->with('ds1', $query1)->with('xuat', $xuat)->with('search', $search)->with('khhot', $khoahochot);
     }
     // public function khoahoc(){
     //     $query =DB::table('courses') //Sử dụng class DB
@@ -77,7 +85,10 @@ class myController extends Controller
             ->orderBy('course_name', 'ASC')
             ->get();
 
-        return view('detailkhoahoc')->with('dt', $query)->with('ls', $qr)->with('mn',$menu);
+
+
+
+        return view('detailkhoahoc')->with('dt', $query)->with('ls', $qr)->with('mn', $menu);
     }
 
 
@@ -126,20 +137,20 @@ class myController extends Controller
 
         $vd = DB::table('subject')
             ->join('lessions', 'subject.subject_id', '=', 'lessions.subject_id')
-            ->join('courses','courses.course_id','=','subject.course_id')
+            ->join('courses', 'courses.course_id', '=', 'subject.course_id')
             ->select("subject.course_id", "subject.subject_name", "subject.content", "subject.picture", "subject.subject_id", "subject.picture", "lessions.lession_name", "lessions.lession_id", 'courses.price')
             ->where([['subject.course_id', '=', $id], ['subject.subject_id', '=', $key]])
             ->orderBy('lessions.lession_name', 'ASC')
             ->limit(1)
             ->get();
 
-            $query = DB::table('courses') //Sử dụng class DB
+        $query = DB::table('courses') //Sử dụng class DB
             ->select("course_id", "course_name", "description", "price", "picture")
             //
             ->orderBy('course_name', 'ASC')
             ->get();
 
-        return view('lessionsview')->with('vd', $vd)->with('ds', $query)->with('ls', $qr)->with('mn',$query);
+        return view('lessionsview')->with('vd', $vd)->with('ds', $query)->with('ls', $qr)->with('mn', $query);
 
         // return view('lessionsview')->with('ds', $query)->with('ls', $qr);
     }
@@ -200,7 +211,8 @@ class myController extends Controller
         return view('layout.main')->with('mn', $query);
     }
 
-    public function search(){
+    public function search()
+    {
         $query = DB::table('courses') //Sử dụng class DB
             ->select("course_id", "course_name", "description", "price", "picture")
             //
@@ -217,15 +229,24 @@ class myController extends Controller
         $xuat = DB::table('courses')
             ->join('subject', 'subject.course_id', '=', 'courses.course_id')
             ->join('lessions', 'lessions.subject_id', '=', 'subject.subject_id')
-            ->select('courses.course_name', 'subject.subject_name', 'lessions.lession_name', 'courses.price','subject.subject_id','subject.subject_name')
+            ->select('courses.course_name', 'subject.subject_name', 'lessions.lession_name', 'courses.price', 'subject.subject_id', 'subject.subject_name')
             ->orderBy('courses.course_id', 'ASC')
             ->get();
 
-        $search = DB::table('subject')
+        if ($_GET['k'] == 0) {
+            $search = DB::table('subject')
+                ->select('*')
+                ->orderBy('subject_id')
+                ->get();
+        }else{
+            $search = DB::table('subject')
             ->select('*')
+            ->where('course_id', '=', $_GET['k'])
             ->orderBy('subject_id')
             ->get();
+        };
+        
 
-        return view('search')->with('mn', $query)->with('ds1', $query1)->with('xuat', $xuat)->with('search',$search);
+        return view('search')->with('mn', $query)->with('ds1', $query1)->with('xuat', $xuat)->with('search', $search);
     }
 }

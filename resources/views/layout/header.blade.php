@@ -7,11 +7,12 @@
         <div class="navbar-collapse collapse move-me">
             <ul class="nav navbar-nav navbar-right .nav">
                 <li style="margin-top: 15px; margin-right: 70px;">
-                        <form action="" method="get">
+                        <form action="{{route('search')}}" method="get" id="form_search">
                             <Label>Bộ lọc </Label>
-                            <select value="">
+                            <select value="" name="k" style="color: black;" >
+                                <option value="0" style="text-align: center;">-----All-----</option>
                                 @foreach($mn as $m)
-                                <option value="{{$m->course_id}}" style="color: red;">{{$m->course_name}}</option>
+                                <option value="{{$m->course_id}}" style="color: black;text-align: center;">{{$m->course_name}}</option>
                                 @endforeach
                             </select>
                             <input type="submit" value="Tìm" class="btn btn-primary">

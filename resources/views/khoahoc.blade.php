@@ -1,6 +1,6 @@
 
 
-@foreach($mn as $n)
+@foreach($khhot as $h)
     <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
         <div class="about-div">
             <div class="d-flex flex-column align-items-center col-3 form-group" style="
@@ -8,14 +8,14 @@
     flex-direction: column;
     align-items: center;">
                 <div class="hand" >
-                    <a class="a-img" href="{{route('kh',[$n->course_id])}}">
-                    <img  class="img-thumbnail" style="height: 208.96px;" src="{{asset('img/khoahoc/'.$n->picture)}}" alt="">
+                    <a class="a-img" href="{{route('kh',[$h->course_id])}}">
+                    <img  class="img-thumbnail" style="height: 208.96px;" src="{{asset('img/khoahoc/'.$h->picture)}}" alt="">
                     </a>
                 </div>
-                <div class="text-center">{{$n->course_name}}</div>
-                <div class="pb-1 btn btn-button ">{{number_format($n->price)}} VNĐ</div>
+                <div class="text-center">{{$h->course_name}}</div>
+                <div class="pb-1 btn btn-button ">{{number_format($h->price)}} VNĐ</div>
                 <div>
-                    <a class="btn btn-primary" href="{{route('kh',[$n->course_id])}}">Chi Tiết</a>
+                    <a class="btn btn-primary" href="{{route('kh',[$h->course_id])}}">Chi Tiết</a>
                 </div>
             </div>
         </div>
