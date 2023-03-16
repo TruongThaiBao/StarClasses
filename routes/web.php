@@ -29,5 +29,7 @@ Route::get('lessionsshow/{id}/{key}',[\App\Http\Controllers\myController::class,
 Route::get('/tai-file-pdf',[\App\Http\Controllers\myController::class,'printpdf'])->name('printpdf');
 // Route::get('/xuat-file-pdf',[\App\Http\Controllers\myController::class,'xuatpdf'])->name('xuatfilepdf');
 
+Route::get('search',[myController::class,'search'])->name('search');
+
 
 

@@ -412,3 +412,10 @@ img {vertical-align: middle;}
 /*@media only screen and (max-width: 300px) {*/
 /*    .prev, .next,.text {font-size: 11px}*/
 /*}*/
+
+/* HIỂN THỊ SEARCH */
+.item-search:hover{
+    opacity: 0.7;
+    margin-top: 0;
+    transition: linear all 400ms;
+}

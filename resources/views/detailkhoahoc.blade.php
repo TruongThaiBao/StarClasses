@@ -16,9 +16,6 @@
     <div class="set-lessions">
         <a href="{{route('printpdf')}}" class="btn btn-primary">Tải về</a>
     </div>
-
-
-
 </div>
 
 @endsection

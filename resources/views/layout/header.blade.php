@@ -6,11 +6,16 @@
         </div>
         <div class="navbar-collapse collapse move-me">
             <ul class="nav navbar-nav navbar-right .nav">
-                <li style="line-height: 65px ;opacity: 0.8;">SUBJECT
-
-                    <select value="" class="option-header">
-                    </select>
-
+                <li style="margin-top: 15px; margin-right: 70px;">
+                        <form action="" method="get">
+                            <Label>Bộ lọc </Label>
+                            <select value="">
+                                @foreach($mn as $m)
+                                <option value="{{$m->course_id}}" style="color: red;">{{$m->course_name}}</option>
+                                @endforeach
+                            </select>
+                            <input type="submit" value="Tìm" class="btn btn-primary">
+                        </form>
                 </li>
                 <li><a href="#home">TRANG CHỦ</a></li>
                 <li><a href="#features-sec">ĐẶC TRƯNG</a></li>

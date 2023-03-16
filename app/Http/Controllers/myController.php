@@ -36,7 +36,12 @@ class myController extends Controller
             ->orderBy('courses.course_id', 'ASC')
             ->get();
 
-        return view('homepage')->with('mn', $query)->with('ds1', $query1)->with('xuat', $xuat);
+        $search = DB::table('subject')
+            ->select('*')
+            ->orderBy('subject_id')
+            ->get();
+
+        return view('homepage')->with('mn', $query)->with('ds1', $query1)->with('xuat', $xuat)->with('search',$search);
     }
     // public function khoahoc(){
     //     $query =DB::table('courses') //Sử dụng class DB
@@ -193,5 +198,34 @@ class myController extends Controller
             ->get();
 
         return view('layout.main')->with('mn', $query);
+    }
+
+    public function search(){
+        $query = DB::table('courses') //Sử dụng class DB
+            ->select("course_id", "course_name", "description", "price", "picture")
+            //
+            ->orderBy('course_name', 'ASC')
+            ->get();
+
+        $query1 = DB::table('users')
+            ->join('subject', 'users.user_id', '=', 'subject.user_id')
+            ->join('courses', 'subject.course_id', '=', 'courses.course_id')
+            ->select('users.full_name', 'users.address', 'courses.course_name', 'users.decription', 'users.picture')
+            ->distinct()
+            ->get();
+
+        $xuat = DB::table('courses')
+            ->join('subject', 'subject.course_id', '=', 'courses.course_id')
+            ->join('lessions', 'lessions.subject_id', '=', 'subject.subject_id')
+            ->select('courses.course_name', 'subject.subject_name', 'lessions.lession_name', 'courses.price','subject.subject_id','subject.subject_name')
+            ->orderBy('courses.course_id', 'ASC')
+            ->get();
+
+        $search = DB::table('subject')
+            ->select('*')
+            ->orderBy('subject_id')
+            ->get();
+
+        return view('search')->with('mn', $query)->with('ds1', $query1)->with('xuat', $xuat)->with('search',$search);
     }
 }
