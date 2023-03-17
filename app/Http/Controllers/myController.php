@@ -249,4 +249,8 @@ class myController extends Controller
 
         return view('search')->with('mn', $query)->with('ds1', $query1)->with('xuat', $xuat)->with('search', $search);
     }
+
+    public function admin(){
+        return view('admin.admin');
+    }
 }

@@ -15,10 +15,10 @@ use Dompdf\Dompdf;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/main',[\App\Http\Controllers\myController::class,'main'])->name('main');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/',[\App\Http\Controllers\myController::class,'main'])->name('main');
 Route::get('/corkie',[\App\Http\Controllers\myController::class,'corkie']);
 Route::get('/test',[\App\Http\Controllers\myController::class,'lessionview']);
 Route::get('/khoahoc/{id}',[\App\Http\Controllers\myController::class,'detail'])->name('kh');
@@ -31,6 +31,8 @@ Route::get('/tai-file-pdf',[\App\Http\Controllers\myController::class,'printpdf'
 // Route::get('/xuat-file-pdf',[\App\Http\Controllers\myController::class,'xuatpdf'])->name('xuatfilepdf');
 
 Route::get('search',[myController::class,'search'])->name('search');
+
+Route::get('admin',[myController::class,'admin']);
 
 
 
